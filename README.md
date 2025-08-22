@@ -150,7 +150,7 @@ If you find DiffScribe helpful and would like to support the development of thes
 
 DiffScribe가 도움이 되셨다면, 고급 기능 개발을 위해 후원을 고려해주세요!
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/jhai0)
+[☕ Support on Ko-fi](https://ko-fi.com/jhai0)
 
 ## 📄 License
 
