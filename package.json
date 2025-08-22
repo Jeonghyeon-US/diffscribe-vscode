@@ -1,7 +1,7 @@
 {
   "name": "diffscribe",
-  "displayName": "DiffScribe – Git Diff Export Tool",
-  "description": "Export Git commit and staged diffs as Markdown files for code review and AI analysis. Git 커밋 및 스테이징된 변경사항을 마크다운으로 내보내는 도구입니다.",
+  "displayName": "DiffScribe – AI Code Review Export for ChatGPT, Claude, Gemini",
+  "description": "One-click export Git diffs to Markdown for AI code review. Works with ChatGPT, Claude, Gemini, GPT-4, Grok & all LLMs. Export commits & staged changes for AI pair programming.",
   "publisher": "diffscribe",
   "version": "0.1.0",
   "repository": {
@@ -12,15 +12,25 @@
     "vscode": "^1.90.0"
   },
   "categories": [
-    "Other"
+    "Other",
+    "SCM Providers"
   ],
   "keywords": [
     "git",
     "diff",
-    "commit",
+    "export",
     "markdown",
     "ai",
-    "export"
+    "chatgpt",
+    "claude",
+    "gemini",
+    "gpt",
+    "llm",
+    "code-review",
+    "commit",
+    "staged",
+    "copilot",
+    "grok"
   ],
   "license": "MIT",
   "icon": "icon.png",
