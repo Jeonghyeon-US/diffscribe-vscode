@@ -1,0 +1,176 @@
+{
+  "name": "diffscribe",
+  "displayName": "DiffScribe – Git Diff Export Tool",
+  "description": "Export Git commit and staged diffs as Markdown files for code review and AI analysis. Git 커밋 및 스테이징된 변경사항을 마크다운으로 내보내는 도구입니다.",
+  "publisher": "diffscribe",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jeonghyeon-US/diffscribe-vscode"
+  },
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "git",
+    "diff",
+    "commit",
+    "markdown",
+    "ai",
+    "export"
+  ],
+  "license": "MIT",
+  "icon": "icon.png",
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "diffscribe.exportCommits",
+        "title": "Commit Diff: Export as Markdown",
+        "category": "DiffScribe"
+      },
+      {
+        "command": "diffscribe.exportStaged",
+        "title": "Staged Diff: Export as Markdown",
+        "category": "DiffScribe"
+      },
+      {
+        "command": "diffscribe.quickExportCommits",
+        "title": "Quick: Export Selected Commits (Default Mode)",
+        "category": "DiffScribe"
+      },
+      {
+        "command": "diffscribe.quickExportStaged",
+        "title": "Quick: Export Staged Changes (Default Mode)",
+        "category": "DiffScribe"
+      }
+    ],
+    "configuration": {
+      "title": "DiffScribe",
+      "properties": {
+        "diffscribe.defaultMode": {
+          "type": "string",
+          "enum": [
+            "full",
+            "hunks"
+          ],
+          "default": "hunks",
+          "description": "Default export mode: full-context or hunks-only / 기본 내보내기 모드: 전체 컨텍스트 또는 변경 부분만"
+        },
+        "diffscribe.includeRenames": {
+          "type": "boolean",
+          "default": true,
+          "description": "Include rename detection in git diff / Git diff에서 이름 변경 감지 포함"
+        },
+        "diffscribe.unifiedContext": {
+          "type": "number",
+          "default": 3,
+          "description": "Number of context lines for git diff / Git diff의 컨텍스트 라인 수"
+        },
+        "diffscribe.singleFile": {
+          "type": "boolean",
+          "default": true,
+          "description": "Export all commits to a single file / 모든 커밋을 하나의 파일로 내보내기"
+        },
+        "diffscribe.outputDirectory": {
+          "type": "string",
+          "default": "diffscribe",
+          "description": "Default output directory for exported files (relative to workspace root) / 내보낸 파일의 기본 출력 디렉토리"
+        },
+        "diffscribe.maxFileBytes": {
+          "type": "number",
+          "default": 2000000,
+          "description": "Maximum file size in bytes before truncation / 잘라내기 전 최대 파일 크기(바이트)"
+        },
+        "diffscribe.detectBinary": {
+          "type": "boolean",
+          "default": true,
+          "description": "Detect and summarize binary files / 바이너리 파일 감지 및 요약"
+        },
+        "diffscribe.language": {
+          "type": "string",
+          "enum": [
+            "en",
+            "ko"
+          ],
+          "default": "en",
+          "description": "Display language (English/Korean) / 표시 언어 (영어/한국어)"
+        }
+      }
+    },
+    "views": {
+      "diffscribe": [
+        {
+          "id": "diffscribe.panel",
+          "name": "DiffScribe",
+          "type": "tree"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "diffscribe",
+          "title": "DiffScribe",
+          "icon": "icon.png"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "diffscribe.exportCommits",
+          "when": "view == diffscribe.panel",
+          "group": "navigation@1"
+        },
+        {
+          "command": "diffscribe.exportStaged",
+          "when": "view == diffscribe.panel",
+          "group": "navigation@2"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "diffscribe.exportCommits",
+          "when": "view == diffscribe.panel",
+          "group": "diffscribe@1"
+        },
+        {
+          "command": "diffscribe.exportStaged",
+          "when": "view == diffscribe.panel",
+          "group": "diffscribe@2"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.90.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "@vscode/test-cli": "^0.0.4",
+    "@vscode/test-electron": "^2.3.8",
+    "eslint": "^8.56.0",
+    "glob": "^11.0.3",
+    "mocha": "^11.7.1",
+    "typescript": "^5.5.0",
+    "vsce": "^2.15.0"
+  }
+}

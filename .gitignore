@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+*.log
+
+# Build outputs
+out/
+dist/
+*.vsix
+
+# IDE
+.vscode/
+*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test
+coverage/
+.nyc_output/
+
+# Local files
+diffscribe/
+*.md
+!README.md
+!CHANGELOG.md
+
+# Environment
+.env
+.env.local
