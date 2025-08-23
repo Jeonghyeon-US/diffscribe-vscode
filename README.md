@@ -122,9 +122,9 @@ Access settings via: File → Preferences → Settings → Extensions → DiffSc
  }
 ```
 
-## 🤝 Contributing
+## 🛠️ Development
 
-Contributions welcome! Please read our contributing guidelines and submit pull requests.
+This project is primarily a personal tool. External contributions are not expected at this stage.
 
 ## ☕ Support
 
