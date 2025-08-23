@@ -160,7 +160,7 @@ MIT License - See [LICENSE](LICENSE) file for details
 
 Found a bug or have a suggestion? Please open an issue on [GitHub](https://github.com/Jeonghyeon-US/diffscribe-vscode).
 
-버그를 발견하거나 제안사항이 있으신가요? [GitHub](https://github.com/Jeonghyeon-US/diffscribe)에 이슈를 열어주세요.
+버그를 발견하거나 제안사항이 있으신가요? [GitHub](ttps://github.com/Jeonghyeon-US/diffscribe-vscode)에 이슈를 열어주세요.
 
 ## 🙏 Acknowledgments
 
