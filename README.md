@@ -48,7 +48,7 @@ DiffScribe bridges this gap with **one-click git diff export**:
 
 ### From VSIX file
 ```bash
-code --install-extension diffscribe-0.1.0.vsix
+code --install-extension diffscribe-0.1.1.vsix
 ```
 
 ## 🎯 Usage

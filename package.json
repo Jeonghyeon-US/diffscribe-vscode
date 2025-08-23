@@ -3,7 +3,7 @@
   "displayName": "DiffScribe – AI Code Review Export for ChatGPT, Claude, Gemini",
   "description": "One-click export Git diffs to Markdown for AI code review. Works with ChatGPT, Claude, Gemini, GPT-4, Grok & all LLMs. Export commits & staged changes for AI pair programming.",
   "publisher": "diffscribe",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/Jeonghyeon-US/diffscribe-vscode"

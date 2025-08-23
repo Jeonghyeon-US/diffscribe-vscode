@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.1] - 2025-01-23
+
+### Documentation Updates
+- Improved README with better SEO keywords and AI compatibility messaging
+- Separated English and Korean documentation for better accessibility
+- Clarified project scope as personal tool to reduce management overhead
+- Enhanced marketplace description for better discoverability
+
 ## [0.1.0] - 2025-01-22
 
 ### Initial Release

@@ -45,7 +45,7 @@ DiffScribe는 **원클릭 git diff 내보내기**로 이 격차를 해결합니�
 
 ### VSIX 파일로 설치
 ```bash
-code --install-extension diffscribe-0.1.0.vsix
+code --install-extension diffscribe-0.1.1.vsix
 ```
 
 ## 🎯 사용법
